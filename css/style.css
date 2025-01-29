@@ -5,134 +5,21 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #e1e1e1; /* Latar belakang lebih terang */
-    color: #333;
-    text-align: center;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ background-color: #e1e1e1;
+color: #333; text-align: center;
     line-height: 1.6;
 }
 
 header {
-    background-color: #1b2a44; /* Biru gelap */
-    color: white;
-    padding: 40px;
+    background-color: #1b2a44;  color: white;
+padding: 40px;
 }
 
 header h1 {
-    font-size: 36px;
-    font-weight: bold;
+    font-size: 36px;  font-weight: bold;
 }
 
 header p {
-    font-size: 20px;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 60px;
-}
-
-.calculator {
-    background: white;
-    padding: 35px;
-    border-radius: 12px;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 500px;
-    text-align: left;
-}
-
-.calculator h2 {
-    text-align: center;
-    font-size: 36px;
-    color: #4a6fa5; /* Biru gelap */
-}
-
-label {
-    display: block;
-    margin-top: 15px;
-    font-size: 20px;
-}
-
-input {
-    width: 100%;
-    padding: 15px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 20px;
-}
-
-button {
-    width: 100%;
-    padding: 15px;
-    margin-top: 25px;
-    background-color: #1b2a44; /* Biru gelap */
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 20px;
-}
-
-button:hover {
-    background-color: #162240; /* Biru gelap sedikit lebih gelap */
-}
-
-#result {
-    margin-top: 30px;
-    font-size: 36px;
-    font-weight: bold;
-    color: #4a6fa5; /* Biru gelap */
-}
-
-.article {
-    background: white;
-    padding: 35px;
-    border-radius: 12px;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 750px;
-    margin-top: 60px;
-    text-align: left;
-}
-
-.article h2 {
-    color: #4a6fa5; /* Biru gelap */
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.article h3 {
-    margin-top: 25px;
-    font-size: 28px;
-    font-weight: bold;
-    color: #333; /* Warna teks terang */
-}
-
-.article ul {
-    padding-left: 25px;
-    margin-top: 15px;
-}
-
-.article ul li {
-    margin-bottom: 15px;
-    font-size: 22px;
-    line-height: 1.8;
-    color: #333; /* Warna teks terang */
-}
-
-.article p {
-    font-size: 22px;
-    line-height: 1.8;
-    color: #333; /* Warna teks terang */
-}
-
-footer {
-    background-color: #1b2a44; /* Biru gelap */
-    color: white;
-    padding: 20px;
-    margin-top: 60px;
-    font-size: 20px;
+    font-size: 20px;
 }
