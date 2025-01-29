@@ -4,31 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator BMI</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css\#style.css">
 </head>
 <body>
-    <div class="container">
-        <h2>Kalkulator BMI</h2>
-        
-        <label for="gender">Jenis Kelamin:</label>
-        <select id="gender">
-            <option value="laki-laki">Laki-laki</option>
-            <option value="perempuan">Perempuan</option>
-        </select>
-        
-        <label for="usia">Usia:</label>
-        <input type="number" id="usia" placeholder="Masukkan usia" required>
-        
-        <label for="berat">Berat Badan (kg):</label>
-        <input type="number" id="berat" placeholder="Masukkan berat badan" required>
-        
-        <label for="tinggi">Tinggi Badan (cm):</label>
-        <input type="number" id="tinggi" placeholder="Masukkan tinggi badan" required>
-        
-        <button onclick="hitungBMI()">Hitung BMI</button>
-        
-        <p class="result" id="hasil"></p>
-    </div>
-    <script src="script.js"></script>
+    <header>
+        <h1>Kalkulator BMI</h1>
+        <p>Hitung indeks massa tubuh Anda dengan mengisi data di bawah ini.</p>
+    </header>
+
+    <main>
+        <section class="calculator">
+            <h2>Hitung BMI Anda</h2>
+            <form id="bmiForm">
+                <label>Jenis Kelamin:</label>
+                <input type="radio" name="gender" value="male" checked> Pria
+                <input type="radio" name="gender" value="female"> Wanita
+                
+                <label for="age">Usia (tahun):</label>
+                <input type="number" id="age" required>
+
+                <label for="weight">Berat Badan (kg):</label>
+                <input type="number" id="weight" required>
+
+                <label for="height">Tinggi Badan (cm):</label>
+                <input type="number" id="height" required>
+                
+                <button type="button" onclick="calculateBMI()">Hitung BMI</button>
+                <button type="reset">Reset</button>
+            </form>
+            <div id="result"></div>
+        </section>
+
+        <section class="article">
+            <h2>Apa Itu BMI?</h2>
+            <p>Body Mass Index (BMI) atau Indeks Massa Tubuh adalah metode yang digunakan untuk mengukur apakah seseorang memiliki berat badan yang sehat berdasarkan tinggi dan berat badannya.</p>
+
+            <h3>Kategori BMI</h3>
+            <ul>
+                <li><strong>BMI kurang dari 18.5:</strong> Kekurangan berat badan</li>
+                <li><strong>BMI 18.5 - 24.9:</strong> Normal (Ideal)</li>
+                <li><strong>BMI 25 - 29.9:</strong> Kelebihan berat badan</li>
+                <li><strong>BMI 30 atau lebih:</strong> Obesitas</li>
+            </ul>
+
+            <h3>Pentingnya Menjaga Berat Badan Ideal</h3>
+            <p>Menjaga berat badan yang ideal bukan hanya sekadar tentang penampilan, tetapi juga berdampak langsung pada kesehatan tubuh. Berat badan yang sehat dapat membantu:</p>
+            <ul>
+                <li>Mengurangi risiko penyakit jantung dan stroke</li>
+                <li>Menurunkan tekanan darah tinggi</li>
+                <li>Mencegah diabetes tipe 2</li>
+                <li>Meningkatkan kualitas tidur</li>
+                <li>Memperpanjang umur</li>
+            </ul>
+
+            <h3>Cara Mencapai Berat Badan Ideal</h3>
+            <p>Berikut beberapa langkah yang bisa dilakukan untuk menjaga berat badan yang sehat:</p>
+            <ul>
+                <li><strong>Makan Sehat:</strong> Konsumsi makanan bergizi seimbang seperti sayuran, buah-buahan, protein, dan karbohidrat kompleks.</li>
+                <li><strong>Olahraga Teratur:</strong> Lakukan aktivitas fisik minimal 30 menit setiap hari seperti berjalan kaki, jogging, atau berenang.</li>
+                <li><strong>Kendalikan Stres:</strong> Stres yang berlebihan dapat mempengaruhi berat badan, jadi penting untuk menjaga kesehatan mental.</li>
+                <li><strong>Minum Air Cukup:</strong> Konsumsi air putih minimal 8 gelas sehari agar metabolisme tetap optimal.</li>
+                <li><strong>Hindari Gaya Hidup Sedentari:</strong> Kurangi waktu duduk berlebihan dan bergeraklah lebih sering.</li>
+            </ul>
+
+            <h3>Faktor yang Mempengaruhi BMI</h3>
+            <p>Perlu diketahui bahwa BMI tidak selalu mencerminkan tingkat kesehatan seseorang secara keseluruhan. Beberapa faktor yang perlu dipertimbangkan meliputi:</p>
+            <ul>
+                <li><strong>Komposisi tubuh:</strong> Seseorang dengan massa otot tinggi mungkin memiliki BMI lebih tinggi meskipun tidak mengalami obesitas.</li>
+                <li><strong>Distribusi lemak:</strong> Lemak yang terkumpul di area perut lebih berisiko bagi kesehatan dibandingkan lemak di area lain.</li>
+                <li><strong>Usia dan jenis kelamin:</strong> Faktor ini dapat memengaruhi kebutuhan metabolisme dan distribusi lemak dalam tubuh.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kalkulator BMI | Semua Hak Dilindungi</p>
+    </footer>
+
+    <script src="js\script.js"></script>
 </body>
 </html>
