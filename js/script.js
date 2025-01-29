@@ -29,6 +29,5 @@ function calculateBMI() {
         <p><strong>Usia:</strong> ${age} tahun</p>
         <p><strong>BMI Anda:</strong> ${bmi}</p>
         <p><strong>Status:</strong> ${status}</p>
-    `;
+    `;
 }
-
