@@ -23,3 +23,79 @@ header h1 {
 header p {
     font-size: 20px;
 }
+label {
+    display: block;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;  margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px; font-size: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;   margin-top: 25px;
+    background-color: #1b2a44;   color: white;
+    border: none;   border-radius: 8px;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #162240; 
+}
+#result {
+    margin-top: 30px;
+    font-size: 36px;  font-weight: bold;
+    color: #4a6fa5; 
+}
+
+.article {
+    background: white;
+    padding: 35px;  border-radius: 12px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 750px;  margin-top: 60px;
+    text-align: left;
+}
+
+.article h2 {
+    color: #4a6fa5;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.article h3 {
+    margin-top: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333; 
+}
+
+.article ul {
+    padding-left: 25px;
+    margin-top: 15px;
+}
+
+.article ul li {
+    margin-bottom: 15px;
+    font-size: 22px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.article p {
+    font-size: 22px;
+    line-height: 1.8;
+    color: #333; 
+}
+
+footer {
+    background-color: #1b2a44;   color: white;
+    padding: 20px;
+    margin-top: 60px;
+    font-size: 20px;
+}
