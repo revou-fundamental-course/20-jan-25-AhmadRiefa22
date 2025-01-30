@@ -8,6 +8,9 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #e1e1e1; /* Latar belakang lebih terang */
     color: #333;
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Align items vertically */
+    min-height: 100vh; /* Ensure body takes up full viewport height */
     text-align: center;
     line-height: 1.6;
 }
@@ -32,19 +35,31 @@ main {
     flex-direction: column;
     align-items: center;
     margin-top: 60px;
+    flex: 1; /* Allow main to expand to fill available space */
 }
 
-.calculator {
+.container {
+    width: 90%; /* Lebar lebih besar */
+    max-width: 1200px; /* Maksimal lebar */
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.calculator, .article {
     background: white;
     padding: 35px;
     border-radius: 12px;
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 500px;
+    width: 90%; /* Lebar lebih besar */
+    max-width: 800px; /* Maksimal lebar */
     text-align: left;
+    margin-top: 60px; /* Consistent margin */
 }
 
-.calculator h2 {
+.calculator h2, .article h2 {
     text-align: center;
     font-size: 36px;
     color: #4a6fa5; /* Biru gelap */
@@ -65,7 +80,7 @@ input {
     font-size: 20px;
 }
 
-button {
+button, .rounded-btn {
     width: 100%;
     padding: 15px;
     margin-top: 25px;
@@ -74,9 +89,11 @@ button {
     border: none;
     border-radius: 8px;
     font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
+button:hover, .rounded-btn:hover {
     background-color: #162240; /* Biru gelap sedikit lebih gelap */
 }
 
@@ -85,23 +102,6 @@ button:hover {
     font-size: 36px;
     font-weight: bold;
     color: #4a6fa5; /* Biru gelap */
-}
-
-.article {
-    background: white;
-    padding: 35px;
-    border-radius: 12px;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 750px;
-    margin-top: 60px;
-    text-align: left;
-}
-
-.article h2 {
-    color: #4a6fa5; /* Biru gelap */
-    font-size: 36px;
-    margin-bottom: 20px;
 }
 
 .article h3 {
@@ -116,14 +116,8 @@ button:hover {
     margin-top: 15px;
 }
 
-.article ul li {
+.article ul li, .article p {
     margin-bottom: 15px;
-    font-size: 22px;
-    line-height: 1.8;
-    color: #333; /* Warna teks terang */
-}
-
-.article p {
     font-size: 22px;
     line-height: 1.8;
     color: #333; /* Warna teks terang */
@@ -133,6 +127,58 @@ footer {
     background-color: #1b2a44; /* Biru gelap */
     color: white;
     padding: 20px;
-    margin-top: 60px;
+    margin-top: auto; /* Push footer to the bottom */
     font-size: 20px;
+    width: 100%; /* Footer memanjang ke seluruh lebar */
+    box-sizing: border-box; /* Memastikan padding tidak menambah lebar total */
+    text-align: center; /* Teks rata tengah (opsional) */
+}
+
+.bmi-result, .category, .consultation, .disclaimer, .diseases, .download-app {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.bmi-value {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.app-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.app-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.app-btn img {
+    width: 150px;
+}
+
+.consultation {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 10px; /* Add some space between the buttons */
+    margin-bottom: 20px; /* Add margin below the consultation section */
+}
+
+@media (max-width: 768px) {
+    .consultation {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+        align-items: center; /* Center buttons horizontally */
+    }
+
+    .rounded-btn {
+        margin-bottom: 10px; /* Add space between stacked buttons */
+        width: 100%; /* Make buttons full width on smaller screens */
+    }
 }

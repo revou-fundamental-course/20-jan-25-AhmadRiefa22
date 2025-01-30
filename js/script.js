@@ -31,3 +31,33 @@ function calculateBMI() {
         <p><strong>Status:</strong> ${status}</p>
     `;
 }
+const downloadBtn = document.getElementById('download-btn');
+const consultNutritionistBtn = document.getElementById('consult-nutritionist-btn');
+const registerNutritionistBtn = document.getElementById('register-nutritionist-btn');
+const consultDoctorBtn = document.getElementById('consult-doctor-btn');
+const registerNowBtn = document.getElementById('register-now-btn');
+
+downloadBtn.addEventListener('click', () => {
+    // Tambahkan fungsi download di sini
+    alert('Fitur download belum tersedia.');
+});
+
+consultNutritionistBtn.addEventListener('click', () => {
+    // Tambahkan fungsi konsultasi ahli gizi di sini
+    alert('Fitur konsultasi ahli gizi belum tersedia.');
+});
+
+registerNutritionistBtn.addEventListener('click', () => {
+    // Tambahkan fungsi registrasi ahli gizi di sini
+    alert('Fitur registrasi ahli gizi belum tersedia.');
+});
+
+consultDoctorBtn.addEventListener('click', () => {
+    // Tambahkan fungsi konsultasi dokter di sini
+    alert('Fitur konsultasi dokter belum tersedia.');
+});
+
+registerNowBtn.addEventListener('click', () => {
+    // Tambahkan fungsi registrasi sekarang di sini
+    alert('Fitur registrasi sekarang belum tersedia.');
+});

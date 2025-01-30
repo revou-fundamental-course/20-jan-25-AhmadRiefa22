@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator BMI</title>
-    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
@@ -49,48 +49,99 @@
                 <li><strong>BMI 25 - 29.9:</strong> Kelebihan berat badan</li>
                 <li><strong>BMI 30 atau lebih:</strong> Obesitas</li>
             </ul>
-        
-            <h3>Pentingnya Menjaga Berat Badan Ideal</h3>
-            <p>Menjaga berat badan yang ideal bukan hanya sekadar tentang penampilan, tetapi juga berdampak langsung pada kesehatan tubuh. Berat badan yang sehat dapat membantu:</p>
-            <ul>
-                <li>Mengurangi risiko penyakit jantung dan stroke</li>
-                <li>Menurunkan tekanan darah tinggi</li>
-                <li>Mencegah diabetes tipe 2</li>
-                <li>Meningkatkan kualitas tidur</li>
-                <li>Memperpanjang umur</li>
-            </ul>
-        
-            <h3>Cara Mencapai Berat Badan Ideal</h3>
-            <p>Berikut beberapa langkah yang bisa dilakukan untuk menjaga berat badan yang sehat:</p>
-            <ul>
-                <li><strong>Makan Sehat:</strong> Konsumsi makanan bergizi seimbang seperti sayuran, buah-buahan, protein, dan karbohidrat kompleks.</li>
-                <li><strong>Olahraga Teratur:</strong> Lakukan aktivitas fisik minimal 30 menit setiap hari seperti berjalan kaki, jogging, atau berenang.</li>
-                <li><strong>Kendalikan Stres:</strong> Stres yang berlebihan dapat mempengaruhi berat badan, jadi penting untuk menjaga kesehatan mental.</li>
-                <li><strong>Minum Air Cukup:</strong> Konsumsi air putih minimal 8 gelas sehari agar metabolisme tetap optimal.</li>
-                <li><strong>Hindari Gaya Hidup Sedentari:</strong> Kurangi waktu duduk berlebihan dan bergeraklah lebih sering.</li>
-            </ul>
-        
-            <h3>Faktor yang Mempengaruhi BMI</h3>
-            <p>Perlu diketahui bahwa BMI tidak selalu mencerminkan tingkat kesehatan seseorang secara keseluruhan. Beberapa faktor yang perlu dipertimbangkan meliputi:</p>
-            <ul>
-                <li><strong>Komposisi tubuh:</strong> Seseorang dengan massa otot tinggi mungkin memiliki BMI lebih tinggi meskipun tidak mengalami obesitas. Sebaliknya, seseorang dengan banyak lemak tubuh dan sedikit massa otot bisa memiliki BMI normal tetapi tetap berisiko untuk masalah kesehatan.</li>
-                <li><strong>Distribusi lemak:</strong> Lemak yang terkumpul di area perut lebih berisiko bagi kesehatan dibandingkan lemak di area lain. Oleh karena itu, dua orang dengan BMI yang sama bisa memiliki risiko kesehatan yang berbeda tergantung pada dimana lemak tubuh mereka tersimpan.</li>
-                <li><strong>Usia dan jenis kelamin:</strong> Faktor ini dapat memengaruhi kebutuhan metabolisme dan distribusi lemak dalam tubuh. Pada umumnya, pria cenderung memiliki massa otot lebih banyak, sedangkan wanita cenderung memiliki lebih banyak lemak tubuh, terutama selama masa kehamilan dan setelah menopause.</li>
-            </ul>
-        
-            <h3>Bagaimana BMI Digunakan dalam Kesehatan?</h3>
-            <p>Dokter atau profesional kesehatan sering menggunakan BMI sebagai alat penyaring untuk menilai apakah seseorang berisiko tinggi terhadap masalah kesehatan yang terkait dengan berat badan, seperti diabetes, hipertensi, dan penyakit jantung. Namun, perlu diingat bahwa BMI bukan satu-satunya indikator kesehatan. Pemeriksaan lebih lanjut mungkin diperlukan untuk mendapatkan gambaran yang lebih akurat tentang kondisi tubuh seseorang.</p>
-        
-            <h3>Apakah BMI Selalu Akurat?</h3>
-            <p>Meski BMI adalah alat yang berguna untuk menilai status berat badan secara umum, ia tidak sempurna dan mungkin tidak sepenuhnya akurat untuk semua orang. Misalnya, atlet atau individu dengan massa otot tinggi mungkin memiliki BMI yang tinggi meskipun mereka memiliki tubuh yang sehat dan bugar. Begitu pula, seseorang dengan BMI normal bisa saja memiliki lemak tubuh yang tinggi, yang mungkin menandakan risiko kesehatan yang lebih besar. 
-                Oleh karena itu, penting untuk menggunakan BMI sebagai salah satu dari berbagai indikator kesehatan dan tidak mengandalkan sepenuhnya pada angka tersebut</p>
-               </section>       
+            <p>NOTE: Kalkulator ini hanya boleh digunakan oleh orang dewasa (Wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter. Kalkulator akan memberi anda gambaran tentang perbandingan berat badan anda dengan nilai umum. Indeks Massa Tubuh (atau BMI) dihitung sebagai berat badan anda (dalam Kilogram) dibagi dengan kuadrat tinggi badan anda (dalam meter) atau BMI=Kg/M&sup2;</p>
+        </section>
+
+        <div class="container">
+            <h1>Hasil</h1>
+            <div class="result">
+                <p>Berat Badan Lebih</p>
+                <p class="bmi-value">24.7</p>
+                <p>Anda memiliki berat badan berlebih</p>
+                <button class="download-btn">Download Hasil BMI</button>
+            </div>
+            <div class="category">
+                <p>Hasil BMI diantara 23 dan 25</p>
+                <p>Anda berada dalam kategori overweight atau berat badan berlebih.</p>
+                <p>Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalor makanan yang dikonsumsi dan berolahraga.</p>
+                <p>Jika BMI Anda berada dalam kategori ini maka Anda dianjurkan untuk menurunkan berat badan hingga batas normal.</p>
+            </div>
+            <div class="consultation">
+                <button class="rounded-btn" id="contact-whatsapp" onclick="openWhatsAppTab()">Konsultasi Ahli Gizi Via Aplikasi</button>
+                <button class="rounded-btn" id="register-doctor" onclick="openWhatsAppTab()">Registrasi Online Ahli Gizi</button>
+            </div>
+            <div class="disclaimer">
+                <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.</p>
+            </div>
+            <div class="diseases">
+                <h2>Beberapa penyakit yang berasal dari kegemukan</h2>
+                <ul>
+                    <li>Diabetes</li>
+                    <li>Hipertensi</li>
+                    <li>Sakit Jantung</li>
+                    <li>Osteoarthritis</li>
+                </ul>
+                <button class="rounded-btn" id="consult-doctor" onclick="openConsultationTab()">Konsultasi Dokter Via Aplikasi</button>
+            </div>
+            <div class="app-download">
+                <h3>Download Aplikasi</h3>
+                <div class="app-badges">
+                    <a href="https://play.google.com/store" target="_blank">
+                        <img src="image\google-play.png" alt="Google Play" width="150" height="44">
+                    </a>
+                    <a href="https://www.apple.com/app-store/" target="_blank">
+                        <img src="image\apple-store.jpg" alt="App Store" width="150" height="44">
+                    </a>
+                </div>
+            </div>
+            
     </main>
 
     <footer>
-        <p>&copy; 2025 Kalkulator BMI | Ahmad Riefa Busyairi</p>
+        <p>&copy; 2025 Kalkulator BMI | Ahmad Riefa B</p>
     </footer>
 
-    <script src="js\script.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        function openConsultationTab() {
+            const newTab = window.open('', '_blank');
+            newTab.document.write(`
+                <style>
+                    body {
+                        background-color: #f0f0f0;
+                        font-family: Arial, sans-serif;
+                        text-align: center;
+                        padding: 20px;
+                    }
+                    button {
+                        margin: 10px;
+                        padding: 10px 20px;
+                        font-size: 16px;
+                        cursor: pointer;
+                    }
+                </style>
+                <h1>Konsultasi</h1>
+                <button onclick="window.location.href='https://www.gooddoctor.co.id'" style="background-color: darkblue; color: white;">Good Doctor</button>
+            `);
+        }
+
+        function openWhatsAppTab() {
+            window.open('https://wa.me/6281929391758', '_blank');
+        }
+
+        function calculateBMI() {
+            const age = document.getElementById('age').value;
+            const weight = document.getElementById('weight').value;
+            const height = document.getElementById('height').value;
+
+            if (weight > 0 && height > 0) {
+                const heightInMeters = height / 100; // Convert cm to meters
+                const bmi = weight / (heightInMeters * heightInMeters);
+                document.getElementById('result').innerHTML = `BMI Anda adalah: <strong>${bmi.toFixed(2)}</strong>`;
+            } else {
+                document.getElementById('result').innerHTML = 'Silakan masukkan nilai yang valid.';
+            }
+        }
+    </script>
 </body>
 </html>
