@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator BMI</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css\style.css">
 </head>
 <body>
     <header>
@@ -33,7 +33,37 @@
                 <button type="reset">Reset</button>
             </form>
             <div id="result"></div>
+              <!--  Hasil Kalkulator -->
+    <section class="output">
+        <h3>Hasil BMI anda adalah</h3>
+        <p id="bmi">0</p>
+        <p id="desc">N/A</p>
+    </section>
+
+    <section class="bmi-scale">
+        <div style="--color: var(--underweight)">
+            <h4>Berat Badan Kurang</h4>
+            <p>&lt; 18.5</p>
+        </div>
+
+        <div style="--color: var(--normal)">
+            <h4>Berat Badan Ideal</h4>
+            <p>18.5 - 25</p>
+        </div>
+
+        <div style="--color: var(--overweight)">
+            <h4>Berat Badan Berlebih</h4>
+            <p>25 - 30</p>
+        </div>
+
+        <div style="--color: var(--obese)">
+            <h4>Berat Badan Obesitas</h4>
+            <p>≥ 30</p>
+        </div>
+    </section>
+            
         </section>
+
 
         <section class="article">
             <h2>Apa Itu BMI?</h2>
@@ -101,7 +131,7 @@
         <p>&copy; 2025 Kalkulator BMI | Ahmad Riefa B</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js\script.js"></script>
     <script>
         function openConsultationTab() {
             const newTab = window.open('', '_blank');
@@ -145,3 +175,4 @@
     </script>
 </body>
 </html>
+<link rel="stylesheet" href="css\style.css">

@@ -1,35 +1,37 @@
-function calculateBMI() {
-    let age = document.getElementById('age').value;
-    let weight = document.getElementById('weight').value;
-    let height = document.getElementById('height').value;
+document.getElementById("bmiForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Mencegah reload halaman
 
-    // Validasi input agar tidak ada yang kosong
-    if (age === '' || weight === '' || height === '') {
-        alert('Harap isi semua data dengan benar!');
+    let gender = document.querySelector('input[name="gender"]:checked');
+    let weight = parseFloat(document.getElementById("weight").value);
+    let height = parseFloat(document.getElementById("height").value);
+    let age = parseInt(document.getElementById("age").value);
+
+    // Validasi Input
+    if (!gender || isNaN(weight) || isNaN(height) || isNaN(age)) {
+        alert("Harap isi semua data dengan benar!");
         return;
     }
 
-    height = height / 100; // Konversi tinggi ke meter
+    height = height / 100; // Konversi cm ke meter
     let bmi = (weight / (height * height)).toFixed(1);
-    let status = '';
 
-    // Menentukan kategori BMI
+    let category = "";
     if (bmi < 18.5) {
-        status = 'Kekurangan berat badan';
-    } else if (bmi >= 18.5 && bmi < 24.9) {
-        status = 'Normal (Ideal)';
-    } else if (bmi >= 25 && bmi < 29.9) {
-        status = 'Kelebihan berat badan';
+        category = "Kekurangan berat badan";
+    } else if (bmi >= 18.5 && bmi <= 24.9) {
+        category = "Normal (Ideal)";
+    } else if (bmi >= 25 && bmi <= 29.9) {
+        category = "Kelebihan berat badan";
     } else {
-        status = 'Obesitas';
+        category = "Kegemukan (Obesitas)";
     }
 
-    // Menampilkan hasil
-    document.getElementById('result').innerHTML = `
-        <p><strong>Usia:</strong> ${age} tahun</p>
-        <p><strong>BMI Anda:</strong> ${bmi}</p>
-        <p><strong>Status:</strong> ${status}</p>
-    `;
+    // Tampilkan hasil
+    document.getElementById("bmiValue").textContent = `BMI Anda: ${bmi}`;
+    document.getElementById("bmiCategory").textContent = `Kategori: ${category}`;
+    document.getElementById("result").classList.remove("hidden");
+});
+    
 }
 const downloadBtn = document.getElementById('download-btn');
 const consultNutritionistBtn = document.getElementById('consult-nutritionist-btn');
